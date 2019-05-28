@@ -4,7 +4,7 @@
 This language can be thought of as "Mini-Haskell". It aims to provide a set of powerful primitives for
 enabling the programmer to write code in a pure, functional style. The 'vanilla' features, especially with regard to the `EnvUnsafeLog`
 monad, form the plumbing for the language and allow practical things like persisting the print buffer between function calls. The mix-in
-features we chose aim to provide the functionality expected out of a Turing-complete programming language, while simultaneously giving the
+features I chose aim to provide the functionality expected out of a Turing-complete programming language, while simultaneously giving the
 programmer the comfort they would normally receive from a scaled-down version of Haskell (see "Mini-Haskell").
 
 ### Instructions
@@ -22,21 +22,21 @@ to make sense of the string you've given.
 
 #### Ast.hs
 This module outlines the abstract syntax tree for the language and should give sufficient background for the types of expressions that are supported by default.
-Mainly, our AST consists of atomic values (chars, booleans, integers, floats, strings, etc.) and then binary operators which can be chained together and nested at
-arbitrary depths. Our `Let`, `Lam`, `App`, and `Compose` data form the basis for the functional aspect of our language and they are treated as first-class citizens
+Mainly, the AST consists of atomic values (chars, booleans, integers, floats, strings, etc.) and then binary operators which can be chained together and nested at
+arbitrary depths. `Let`, `Lam`, `App`, and `Compose` data form the basis for the functional aspect of the language and they are treated as first-class citizens
 throughout the parsing and evaluation logic.
 
 #### ParserMonad.hs
-`ParserMonad` forms the monadic plumbing for our parser. It is essentially a modified version of the Maybe Monad in which `Nothing` represents a total failure of the
+`ParserMonad` forms the monadic plumbing for the parser. It is essentially a modified version of the Maybe Monad in which `Nothing` represents a total failure of the
 parser and `Just (<parsed string>, <rest of input string>)` allows for a chaining of subparsers that are applied according to a precedence ordering.
 
 #### Parser.hs
 The `Parser` module contains all of the parsing logic for the language. The subparsers are chained together according to precedence laws which vary between mirroring
 those of Haskell and those of the C/C++ family. The main export of this API is the `parser` which, when combined with the `parse` execution method, can be used in the
-`repl` to show what an input string would be transformed into in terms of our abstract syntax tree via the command `parse parser <input string>`. 
+`repl` to show what an input string would be transformed into in terms of the abstract syntax tree via the command `parse parser <input string>`. 
 
 #### Eval.hs
-This module defines the evaluation logic for our AST and contains the data type `Val` which consists of definitions corresponding to 6 different values:
+This module defines the evaluation logic for the AST and contains the data type `Val` which consists of definitions corresponding to 6 different values:
 <pre>
 I               Integer Types
 F               Floating-Point Types
@@ -47,7 +47,7 @@ Ls              List Types
 Fun             Function Types
 Error           Error Type (**)
 ------------------------------------------------------
-(**) For when values don't conform to our `Val` system.
+(**) For when values don't conform to the `Val` system.
 </pre>
 
 #### Check.hs
@@ -55,7 +55,7 @@ The `Check` module performs static checking on the abstract syntax tree returned
 API is the `check` method, which, given an abstract syntax tree, will warn if a variable is used in an expression but no accompanying definition exists in the scope.
 
 #### Exec.hs
-`Exec` serves as the main entry point to our API. It combines `Parser`, `Check`, and `Eval`, applying them in sequence to generate a result from an input string
+`Exec` serves as the main entry point to the API. It combines `Parser`, `Check`, and `Eval`, applying them in sequence to generate a result from an input string
 with contextual error reporting, static variable checking, as well as much more. In combination with a means of I/O (perhaps the I/O monad), the method `exec` can be
 integrated to parse entire files with little extra work required.
 
