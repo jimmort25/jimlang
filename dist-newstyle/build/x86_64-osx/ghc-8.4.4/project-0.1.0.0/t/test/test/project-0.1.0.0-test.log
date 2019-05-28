@@ -1,0 +1,104 @@
+Test suite test: RUNNING...
+allTests
+  CheckTest
+    Check for Lambdas
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+    Check for let expressions
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+    Check for Arithmetic expressions
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+    Check for Comparison expressions
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+  EvalTest
+    Basic Ints: :                                     OK
+    Basic Bools: :                                    OK
+    Basic Floats: :                                   OK
+    Basic Chars: :                                    OK
+    Basic Strings: :                                  OK
+    List Operators: :                                 OK
+    Integer Arithmetic: :                             OK
+    Floating-Point Arithmetic: :                      OK
+    Comparison Operators: :                           OK
+    Boolean Operators: :                              OK
+    If Condition: :                                   OK
+    Separator: :                                      OK
+    Let Statements: :                                 OK
+    App/Lam Statements: :                             OK
+  parser Test
+    showPretty tests: :                               OK (0.07s)
+    showFullyParen tests: :                           OK (14.60s)
+  CheckTest
+    Check for Lambdas
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+    Check for let expressions
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+    Check for Arithmetic expressions
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+    Check for Comparison expressions
+      One free variable: :                            OK
+      Multiple free variables: :                      OK
+  ExecTest
+    Basic Expressions
+      Atomic Values: :                                OK
+    Homogeneous Boolean Expressions
+      Boolean And: :                                  OK
+      Boolean Or: :                                   OK
+      Boolean Not: :                                  OK
+    Heterogeneous Boolean Expressions
+      && + ||: :                                      OK
+      || + !: :                                       OK
+      && + !: :                                       OK
+    Function Application
+      Single Argument Lambdas: :                      OK
+      Multi-Argument Lambdas: :                       OK
+      Applying lambdas to lambdas:                    OK
+      Nested function application:                    OK (0.02s)
+      Erroneous Function Application:                 OK
+    Let Expressions
+      Single definition let expressions: :            OK
+      Multi-definition let expressions: :             OK
+    Print Expressions
+      Atomic print expressions: :                     OK
+      Print expressions inside functions: :           OK (0.01s)
+      Print expressions under function composition: : OK
+      Print expressions with separators: :            OK
+    Function Composition
+      Composing functions with compatible types: :    OK
+      Composing functions with incompatible types: :  OK
+      Erroneous function composition: :               OK
+    List Index Expressions
+      List Index with valid index: :                  OK
+      List Index with invalid index: :                OK
+      List Index applied to non-list data type: :     OK
+    If expressions
+      Valid If expressions: :                         OK
+      Malformed If expressions: :                     OK
+    List Operations
+      List Operations: :                              OK
+    Homogeneous Arithmetic Expressions
+      Arithmetic: Addition :                          OK
+      Arithmetic: Subtraction :                       OK
+      Arithmetic: Multiplication :                    OK
+      Arithmetic: Division :                          OK
+      Arithmetic: Exponentiation :                    OK
+      Arithmetic: Modulus :                           OK
+    Heterogeneous Arithmetic Expressions
+      Heterogeneous Arithmetic :                      OK
+    Separator Expressions
+      Seperator :                                     OK
+    Boolean Comparison Expressions
+      Boolean Comparison Operators :                  OK
+    Expressions with comments
+      Multi-Line Comments: :                          OK
+      Single-Line Comments: :                         OK
+
+All 70 tests passed (14.75s)
+Test suite test: PASS
+Test suite logged to: /Users/jimmortenson/Code/School/CS320/project-avengers-infinity-list/dist-newstyle/build/x86_64-osx/ghc-8.4.4/project-0.1.0.0/t/test/test/project-0.1.0.0-test.log
