@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/jimmort25/jimlang.svg?branch=master)](https://travis-ci.com/jimmort25/jimlang)
 
 ## Summary
-Despite the colorful name, this language can be thought of as "Mini-Haskell". It aims to provide a set of powerful primitives for
+This language can be thought of as "Mini-Haskell". It aims to provide a set of powerful primitives for
 enabling the programmer to write code in a pure, functional style. The 'vanilla' features, especially with regard to the `EnvUnsafeLog`
 monad, form the plumbing for the language and allow practical things like persisting the print buffer between function calls. The mix-in
 features we chose aim to provide the functionality expected out of a Turing-complete programming language, while simultaneously giving the
