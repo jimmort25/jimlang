@@ -1,16 +1,3 @@
-# Project
-
-Follow the [instructions](INSTRUCTIONS.md), use this space to document your project for yourself and the graders.
-
-## Continuous Integration
-Travis-CI: https://travis-ci.com/BU-CS320/project-avengers-infinity-list/
-If you click the link above and log in to your GitHub account that has admin priviliges on the BU-CS320 repo, you will be redirected to the corresponding Travis-CI instance for this project. The three separate builds are each for commonly used versions of Haskell and in terms of a best practice, this would ensure safety across machines if this were made available to the public.
-
-## Names
-- David Kirk (dsak@bu.edu)
-- Jason Hong (jason810@bu.edu)
-- James Mortenson (jimmort@bu.edu)
-
 ## Summary
 Despite the colorful name, this language can be thought of as "Mini-Haskell". It aims to provide a set of powerful primitives for
 enabling the programmer to write code in a pure, functional style. The 'vanilla' features, especially with regard to the `EnvUnsafeLog`
@@ -69,17 +56,6 @@ API is the `check` method, which, given an abstract syntax tree, will warn if a 
 `Exec` serves as the main entry point to our API. It combines `Parser`, `Check`, and `Eval`, applying them in sequence to generate a result from an input string
 with contextual error reporting, static variable checking, as well as much more. In combination with a means of I/O (perhaps the I/O monad), the method `exec` can be
 integrated to parse entire files with little extra work required.
-
-### Mix-In Features
-<pre>
-Function composition operator (.)               (5pts)
-Haddock-style comments/HTML Docs                (5pts)
-Multiple-argument lambdas                       (5pts)
-Multiple-argument let                           (5pts)
-Continuous integration setup                    (5pts)
--------------------------------------------------------
-TOTAL:                                          (25pts)
-</pre>
 
 
 
