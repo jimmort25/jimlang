@@ -8,9 +8,7 @@ features I chose aim to provide the functionality expected out of a Turing-compl
 programmer the comfort they would normally receive from a scaled-down version of Haskell (see "Mini-Haskell").
 
 ### Instructions
-Since this project has a configured Travis-CI instance, the `project.cabal` file is located in the directory entitled
-`BU-CS320/project-avengers-infinity-list`. Hence, you must `cd` into this directory in order to run the tests using
-`cabal new-test`. Further, if you would like to interact with the project directly, load the root module through the command: `:load Exec` and then simply type `exec <string to parse>` and you will be able to parse and evaluate a wide array of different expressions. The result returned by this call has three distinct forms. The first, indicating success, is of the form: `Ret <result of computation> <print buffer> <scope warnings>`.
+If you would like to interact with the project directly, load the root module through the command: `:load Exec` and then simply type `exec <string to parse>` and you will be able to parse and evaluate a wide array of different expressions. The result returned by this call has three distinct forms. The first, indicating success, is of the form: `Ret <result of computation> <print buffer> <scope warnings>`.
 The second, indicating a successful parse but an unsuccessful evaluation (potentially because your expression is malformed), is of the form:
 `RuntimeError <error message> <print buffer> <scope warnings>`. Finally, the third is simply `ParseError`, which occurs when the parser is unable
 to make sense of the string you've given.
